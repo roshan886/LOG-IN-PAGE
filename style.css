@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color:#F0F0F0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    z-index: 7;
+
+}
+.mouse{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    transition:0.2s;
+    z-index: 9999;
+}
+H1{
+    text-align: center;
+    margin: 12px;
+}
+.form{
+    width: 300px;
+    height: 500px;
+    border: 1px solid #F0F0F0;
+    border-radius: 10px;
+    padding: 15px;
+  position: relative;
+  background-color: transparent;
+ backdrop-filter: blur(12px);
+
+
+    
+}
+form{
+    width: 100%;
+    height: 100%;
+
+    /* -webkit-backdrop-filter: blur(12px); */
+
+}
+
+.circle{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(56, 55, 55);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -8;
+    left: 55%;
+    top: 14%;
+}
+.circle1{
+      left: 35%;
+        width: 250px;
+        background-image: radial-gradient(black,rgb(47, 46, 46));
+    height: 250px;
+
+    top: 64%;
+}
+.same{
+    margin: 10px 0;
+    display: flex;
+    flex-direction:column-reverse;
+}
+input{
+    padding: 10px 10px ;
+    border: none;
+    outline: gray;
+}
+.inputboxOfaddress{
+    width: 100%;
+    height: 80px;
+    border: none ;
+}
+.inputboxOfaddress input{
+    width: 100%;
+    height: 100%;
+    border: none !important;
+}
+
+button{
+    width: 100%;
+    padding: 10px ;
+    background-color: black;
+    border-radius: 5px ;
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+    border: none;
+
+}
+small{
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+input{
+    background-color: transparent;
+    outline:1px solid white;
+}
