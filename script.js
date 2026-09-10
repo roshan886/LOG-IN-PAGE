@@ -59,11 +59,11 @@ Form.addEventListener("submit", (e) => {
         Errors[0].innerText = "Please Enter Name"
 
     }
-    else if (!/^[a-zA-Z ]+$/.test(name)) {
-    inputAll[0].style.border = "1px solid red";
-    Errors[0].style.display = "flex";
-    Errors[0].innerText = "Please Enter only text";
-}
+//     else if (!/^[a-zA-Z ]+$/.test(name)) {
+//     inputAll[0].style.border = "1px solid red";
+//     Errors[0].style.display = "flex";
+//     Errors[0].innerText = "Please Enter only text";
+// }
     else {
         inputAll[0].style.border = "none"
         Errors[0].innerText = ""
