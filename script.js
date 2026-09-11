@@ -10,12 +10,9 @@ let body=document.querySelector("body")
 body.addEventListener("mousemove",(e) => { 
    Mouse.style.left =e.clientX+"px";
    Mouse.style.top =e.clientY+"px";
-   
  })
  body.addEventListener("mouseleave",(e) => { 
-      Mouse.style.opacity ="0";
-
-   
+      Mouse.style.opacity ="0"; 
  })
   body.addEventListener("mouseenter",(e) => { 
       Mouse.style.opacity ="1";
@@ -29,7 +26,7 @@ body.addEventListener("mousemove",(e) => {
 CirBtn.addEventListener("dblclick", () => {
     console.log("helo")
     btn.style.display = "none"
-    window.print("helo")
+    window.print()
     setTimeout(() => {
         btn.style.display = "initial"
     }, 1000);
@@ -51,28 +48,37 @@ Form.addEventListener("submit", (e) => {
         Errors[2].innerText = `please  ${inputAll[0].value} fill comments box`;
     }
 
-
+ let NameRegex= /^[A-Za-z ]+$/ 
     // for name validation 
     if (inputAll[0].value === "") {
         inputAll[0].style.border = "1px solid red"
         Errors[0].style.display = "flex"
         Errors[0].innerText = "Please Enter Name"
+       
 
     }
-//     else if (!/^[a-zA-Z ]+$/.test(name)) {
-//     inputAll[0].style.border = "1px solid red";
-//     Errors[0].style.display = "flex";
-//     Errors[0].innerText = "Please Enter only text";
-// }
+    else if(!NameRegex.test(inputAll[0].value)){
+        Errors[0].innerHTML="Only Charactors Allowed."
+        inputAll[0].style.border = "1px solid red"
+        Errors[0].style.display = "flex"
+    }
     else {
         inputAll[0].style.border = "none"
         Errors[0].innerText = ""
         Errors[0].style.display = "none"
     }
+
+let PHoneRegex=/^[0-9]+$/
+let checkPHoneREgex=PHoneRegex.test(inputAll[1].value)
     if (inputAll[1].value == "") {
         inputAll[1].style.border = "1px solid red"
         Errors[1].style.display = "flex"
         Errors[1].innerText = "Please Enter Phone number"
+    }
+    else if(!checkPHoneREgex){
+         inputAll[1].style.border = "1px solid red"
+        Errors[1].style.display = "flex"
+        Errors[1].innerText = "Only Number Allowed"
     }
     else if (inputAll[1].value.length !== 10) {
         inputAll[1].style.border = "1px solid red"
